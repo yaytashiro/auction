@@ -1,0 +1,11 @@
+<h1>出品物一覧</h1>
+<ul>
+	<% @items.each do |item|%>
+	<li>
+	<%= link_to item.name, item_path(item.id) %>
+<!-- 		<a href="./<%= item.id %>">
+			<%= item.name %>
+		</a> -->
+	</li>
+	<% end %>
+</ul>
