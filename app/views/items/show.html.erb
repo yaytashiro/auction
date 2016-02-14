@@ -1,3 +1,5 @@
+<h1>商品詳細ページ</h1>
+
 <p>
 	<b>商品名：<%= @item.name %></b>
 </p>
@@ -16,3 +18,5 @@
 <p>
 	<b>商品イメージURL：<%= @item.image_url%></b>
 </p>
+
+<%= link_to '削除する', item_path(@item.id), method: :delete %>

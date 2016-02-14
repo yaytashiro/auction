@@ -3,9 +3,11 @@
 	<% @items.each do |item|%>
 	<li>
 	<%= link_to item.name, item_path(item.id) %>
+	<%= link_to '削除する', item_path(item.id), method: :delete %>
 <!-- 		<a href="./<%= item.id %>">
 			<%= item.name %>
 		</a> -->
 	</li>
+
 	<% end %>
 </ul>

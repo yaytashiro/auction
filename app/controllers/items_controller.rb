@@ -19,6 +19,15 @@ class ItemsController < ApplicationController
 		redirect_to @item
 	end
 
+	def destroy
+		@items = Item.find(params[:id])
+		#.destroyで一発で破壊することができる
+		@items.destroy
+		#削除したら飛ばすページがないのでセオリー的には
+		#一覧ページに飛ばされるよね
+		redirect_to items_url
+	end
+
 	def show
 		@item = Item.find(params[:id])
 	end
